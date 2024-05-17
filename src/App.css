@@ -60,10 +60,6 @@
 
 /* ////////////////////////     TOGGLE BTN END     /////////////////////////// */
 
-body {
-  transition: all 0.3s ease-in-out;
-}
-
 body.dark {
   background-color: #000000;
 }
@@ -74,11 +70,17 @@ html {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 body {
+  transition: all 0.3s ease-in-out;
   margin: 0;
   min-height: 100%;
   display: flex;
   flex-direction: column;
   background-color: var(--clr-whiteish);
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 #content {
