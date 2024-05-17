@@ -202,70 +202,6 @@ h1 {
   -webkit-filter: grayscale(1);
 }
 
-/* --------------------------- Top Menu Bar Section ------------------------------  */
-
-#top-menu-bar {
-  text-align: center;
-  background-color: var(--clr-blue);
-  color: var(--clr-white);
-  margin: 0;
-  padding: 2px;
-}
-
-#top-menu-bar li {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-}
-
-#top-menu-bar a {
-  display: inline-block;
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: 600;
-  position: relative;
-  color: var(--clr-white);
-  padding: 5px 10px;
-  border-radius: 4px;
-  transition: 0.5s;
-}
-
-#top-menu-bar a:visited {
-  color: var(--clr-white);
-}
-
-#top-menu-bar a.active {
-  color: var(--clr-blue);
-  background: var(--clr-white);
-}
-#top-menu-bar a:hover {
-  font-size: 25px;
-  background-color: var(--clr-yellow);
-  color: var(--clr-sec-dark);
-  border-bottom: 2px solid var(--clr-blue);
-  border-right: 2px solid var(--clr-blue);
-}
-
-.page {
-  display: none;
-  flex: 1;
-  background-color: var(--clr-white);
-  margin: 10px;
-  padding: 24px;
-  border-radius: 4px;
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
-  animation: mymove 4s infinite;
-}
-
-.page h2 {
-  margin: 0 0 10px 0;
-}
-@keyframes mymove {
-  50% {
-    box-shadow: 5px 5px 10px var(--clr-blue);
-  }
-}
-
 /* --------------------------- Languages Section ------------------------------  */
 
 table,
@@ -299,7 +235,25 @@ td.favorite {
 }
 
 /* --------------------------- Color Design Section ------------------------------  */
+.page {
+  display: none;
+  flex: 1;
+  background-color: var(--clr-white);
+  margin: 10px;
+  padding: 24px;
+  border-radius: 4px;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+  animation: mymove 4s infinite;
+}
 
+.page h2 {
+  margin: 0 0 10px 0;
+}
+@keyframes mymove {
+  50% {
+    box-shadow: 5px 5px 10px var(--clr-blue);
+  }
+}
 h2 {
   color: var(--clr-blue);
 }
