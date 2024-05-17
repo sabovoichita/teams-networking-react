@@ -101,12 +101,6 @@ export function TeamsTableWrapper() {
   ];
   return (
     <>
-      <TeamsTable teams={[]} loading={true} />
-      <hr />
-      <TeamsTable teams={[]} loading={false} />
-      <hr />
-      <TeamsTable teams={teams} loading={true} />
-      <hr />
       <TeamsTable teams={teams} loading={false} />
     </>
   );

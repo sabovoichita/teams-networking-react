@@ -18,7 +18,7 @@ export default function AppHeader() {
           </div>
         </div>
       </div>
-      <MainMenu />
+      <MainMenu active="teams" />
     </header>
   );
 }
