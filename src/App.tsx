@@ -1,36 +1,8 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import selfie from "./images/selfie.jpg";
-import pic_bulb from "./images/pic_bulbon.gif";
-import linkedin from "./images/linkedin.svg";
-import github from "./images/github.svg";
-import youtube from "./images/youtube.svg";
-import email from "./images/email-round.svg";
-import MainMenu from "./menu/MainMenu"; //default export
-import { AppFooter } from "./footer/components"; //named export
-
-function AppHeader() {
-  return (
-    <header>
-      <div id="header-wrapper">
-        <div id="header-picture">
-          <img height="100" src={selfie} alt="selfie" />
-        </div>
-        <div id="header-info">
-          <h1>Voichita Maria</h1>
-          <p id="job-title">Transport Manager</p>
-        </div>
-        <div className="toggle-container" id="greyscale">
-          <div>
-            <img src={pic_bulb} alt="lighton" width="30px" />
-          </div>
-        </div>
-      </div>
-      <MainMenu />
-    </header>
-  );
-}
+import { AppFooter } from "./footer/components";
+import AppHeader from "./header";
 
 function ContentWrapper() {
   return (

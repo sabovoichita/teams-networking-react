@@ -1,3 +1,8 @@
+import linkedin from "../images/linkedin.svg";
+import github from "../images/github.svg";
+import youtube from "../images/youtube.svg";
+import email from "../images/email-round.svg";
+
 export function AppFooter() {
   return (
     <footer>
