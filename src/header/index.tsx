@@ -1,10 +1,11 @@
 import MainMenu from "../menu/MainMenu";
 import selfie from "../images/selfie.jpg";
 import pic_bulb from "../images/pic_bulbon.gif";
+import { useState } from "react";
 export default function AppHeader() {
-  let active = "teams";
+  const [active, setActive] = useState("teams");
 
-  console.warn("render AppHeader");
+  // console.warn("render AppHeader", active);
   return (
     <header>
       <div id="header-wrapper">
@@ -12,7 +13,7 @@ export default function AppHeader() {
           <img height="100" src={selfie} alt="selfie" />
         </div>
         <div id="header-info">
-          <h1>Voichita Maria</h1>
+          <h1>Voichita Maria : {active}</h1>
           <p id="job-title">Transport Manager</p>
         </div>
         <div className="toggle-container" id="greyscale">
@@ -25,7 +26,7 @@ export default function AppHeader() {
         active={active}
         setActive={page => {
           console.warn("active", page);
-          active = page;
+          setActive(page);
         }}
       />
     </header>
