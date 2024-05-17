@@ -1,4 +1,5 @@
 import { SideMenu } from "../menu/SideMenu";
+import { TeamsTable } from "../teams/TeamsTable";
 import { KnownLanguagesTable } from "./KnownLanguagesTable";
 
 export function ContentWrapper() {
@@ -56,53 +57,16 @@ export function ContentWrapper() {
           <ul></ul>
         </div>
 
-        <div id="projects" className="teams" style={{ display: "block" }}>
+        <div id="teams" className="teams" style={{ display: "block" }}>
           <h2>
-            <span>🏆Projects</span>
+            <span>🏆Teams</span>
           </h2>
-          <ul></ul>
-          <ul>
-            <li>
-              <a href="">📜2022 -Transport manager certification✅</a>
-            </li>
-            <li>
-              <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design" target="_blank">
-                🤝2022-2023 - FreeCodeCamp- Responsive Web Design ✅
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.udemy.com/course/become-a-web-developer-from-scratch-step-by-step-guide/
-                "
-                target="_blank"
-              >
-                👏2023-2024 - Udemy-Become a Web Developer from Scratch, step by step Guide ✅
-              </a>
-            </li>
-            <li>
-              <a
-                href="
-                https://fasttrackit.org/curs-web-cluj-napoca/"
-                target="_blank"
-              >
-                👩‍🎓2023-2024 - FasttrackIt-- Web Developer Course ✅
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.udemy.com/certificate/UC-7582477a-81f2-482c-83ec-09509b131585/
-                "
-                target="_blank"
-              >
-                👏2024 - Udemy-Foundations of Web Development: CSS, Bootstrap, JS, React ✅
-              </a>
-            </li>
-            <li>
-              <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/" target="_blank">
-                💨2023-2024 - FreeCodeCamp- JavaScript Algorithms and Data Structures - In progress🔜
-              </a>
-            </li>
-          </ul>
+          <div className="tbar">
+            <button id="removeSelected">❌ Remove selected</button>
+            <div className="tfill"></div>
+            <input type="search" name="Search" id="search" placeholder="Search..." /> <label htmlFor="search">🔎</label>
+          </div>
+          <TeamsTable />
         </div>
 
         <div id="languages" className="page">

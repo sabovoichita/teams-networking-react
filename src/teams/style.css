@@ -1,0 +1,29 @@
+#teamsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+#teamsTable tfoot input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+}
+#teamsTable th,
+#teamsTable td {
+  border: 1px solid #057988;
+  padding: 5px;
+}
+
+#teamsTable th {
+  background-color: #0598ab;
+  color: white;
+}
+
+#teamsTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#teamsTable input:not([type="checkbox"]) {
+  width: 100%;
+}
+#teamsTable tfoot input:not([type="image" i]) {
+  box-sizing: border-box;
+}
