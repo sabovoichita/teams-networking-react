@@ -1,5 +1,5 @@
 import { SideMenu } from "../menu/SideMenu";
-import { TeamsTable } from "../teams/TeamsTable";
+import { TeamsTableWrapper } from "../teams/TeamsTable";
 import { KnownLanguagesTable } from "./KnownLanguagesTable";
 
 export function ContentWrapper() {
@@ -62,11 +62,12 @@ export function ContentWrapper() {
             <span>🏆Teams</span>
           </h2>
           <div className="tbar">
-            <button id="removeSelected">❌ Remove selected</button>
-            <div className="tfill"></div>
-            <input type="search" name="Search" id="search" placeholder="Search..." /> <label htmlFor="search">🔎</label>
+            <div>
+              <input type="search" name="Search" id="search" placeholder="Search..." />{" "}
+              <label htmlFor="search">🔎</label>
+            </div>
           </div>
-          <TeamsTable />
+          <TeamsTableWrapper />
         </div>
 
         <div id="languages" className="page">

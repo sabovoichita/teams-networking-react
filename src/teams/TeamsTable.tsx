@@ -1,6 +1,67 @@
-import "../teams/style.css";
+import "./style.css";
 
-export function TeamsTable() {
+export function TeamsTable(props) {
+  //   console.warn("props", props);
+  return (
+    <form id="teamsForm" action="" method="POST">
+      <table id="teams">
+        <thead>
+          <tr>
+            <th>Promotion</th>
+            <th>Members</th>
+            <th>Project Name</th>
+            <th>Project URL</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {props.teams.map(({ promotion, members, name, url, id }) => (
+            <tr key={id}>
+              <td>{promotion}</td>
+              <td>{members}</td>
+              <td>{name}</td>
+              <td>
+                <a href={url} target="_blank">
+                  {url.replace("https://github.com/", "")}
+                </a>
+              </td>
+              <td>
+                <a className="remove-btn">✖</a>
+                <a className="edit-btn">&#9998;</a>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>
+              <input type="text" placeholder="Enter Group" name="promotion" id="promotion" required />
+            </td>
+            <td>
+              <input type="text" placeholder="Enter Members" name="members" id="members" required />
+            </td>
+            <td>
+              <input type="text" placeholder="Enter Project Name" name="name" id="name" required />
+            </td>
+            <td>
+              <input type="text" placeholder="Project URL" name="url" id="url" required />
+            </td>
+            <td>
+              <button type="submit" title="Save">
+                💾
+              </button>
+              <button type="reset" title="Cancel">
+                ✖
+              </button>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </form>
+  );
+}
+
+export function TeamsTableWrapper() {
   const teams = [
     {
       id: "toze8j1610313009673",
@@ -39,66 +100,14 @@ export function TeamsTable() {
     }
   ];
   return (
-    <form id="teamsForm">
-      <table border={1} id="teamsTable">
-        <colgroup>
-          <col className="select-all-column" />
-          <col />
-          <col />
-          <col />
-          <col className="table-actions" />
-        </colgroup>
-        <thead>
-          <tr>
-            <th>
-              <input type="checkbox" name="selectAll" id="selectAll" />
-            </th>
-            <th>Promotion</th>
-            <th>Members</th>
-            <th>Project Name</th>
-            <th>Project URL</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          {teams.map(({ promotion, members, name, url, id }) => (
-            <tr key={id}>
-              <td>{promotion}</td>
-              <td>{members}</td>
-              <td>{name}</td>
-              <td>
-                <a href={url} target="_blank">
-                  {url.replace("https://github.com/", "")}
-                </a>
-              </td>
-              <td>
-                <a className="remove-btn">✖</a>
-                <a className="edit-btn">&#9998;</a>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-        <tfoot>
-          <tr>
-            <td></td>
-            <td>
-              <input name="promotion" id="promotion" placeholder="Enter promotion" required />
-            </td>
-            <td>
-              <input name="members" id="members" placeholder="Enter members" required />
-            </td>
-            <td>
-              <input name="name" id="name" placeholder="Enter name" required />
-            </td>
-            <td>
-              <input name="url" id="url" placeholder="Enter project URL" required />
-            </td>
-            <td>
-              <button type="submit">💾</button> <button type="reset">❌</button>
-            </td>
-          </tr>
-        </tfoot>
-      </table>
-    </form>
+    <>
+      <TeamsTable teams={[]} loading={true} />
+      <hr />
+      <TeamsTable teams={[]} loading={false} />
+      <hr />
+      <TeamsTable teams={teams} loading={true} />
+      <hr />
+      <TeamsTable teams={teams} loading={false} />
+    </>
   );
 }
